@@ -1,6 +1,6 @@
 <?php
 
-namespace SumoCoders\Teamleader\Departments;
+namespace OnlineSupporter\Teamleader\Departments;
 
 class Department
 {

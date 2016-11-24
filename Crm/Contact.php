@@ -1,9 +1,9 @@
 <?php
 
-namespace SumoCoders\Teamleader\Crm;
+namespace OnlineSupporter\Teamleader\Crm;
 
-use SumoCoders\Teamleader\Exception;
-use SumoCoders\Teamleader\Teamleader;
+use OnlineSupporter\Teamleader\Exception;
+use OnlineSupporter\Teamleader\Teamleader;
 
 /**
  * Contact class

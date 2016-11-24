@@ -4,7 +4,7 @@
  * @todo PDF generation functions
  */
 
-namespace SumoCoders\Teamleader\tests;
+namespace OnlineSupporter\Teamleader\tests;
 
 spl_autoload_register(function ($class) {
     $parts = explode('\\', $class);
@@ -22,16 +22,16 @@ spl_autoload_register(function ($class) {
 
 require_once 'config.php';
 
-use SumoCoders\Teamleader\Teamleader;
-use SumoCoders\Teamleader\Crm\Contact;
-use SumoCoders\Teamleader\Crm\Company;
-use SumoCoders\Teamleader\Deals\Deal;
-use SumoCoders\Teamleader\Invoices\Invoice;
-use SumoCoders\Teamleader\Invoices\InvoiceLine;
-use SumoCoders\Teamleader\Invoices\Creditnote;
-use SumoCoders\Teamleader\Invoices\CreditnoteLine;
-use SumoCoders\Teamleader\Subscriptions\Subscription;
-use SumoCoders\Teamleader\Subscriptions\SubscriptionLine;
+use OnlineSupporter\Teamleader\Teamleader;
+use OnlineSupporter\Teamleader\Crm\Contact;
+use OnlineSupporter\Teamleader\Crm\Company;
+use OnlineSupporter\Teamleader\Deals\Deal;
+use OnlineSupporter\Teamleader\Invoices\Invoice;
+use OnlineSupporter\Teamleader\Invoices\InvoiceLine;
+use OnlineSupporter\Teamleader\Invoices\Creditnote;
+use OnlineSupporter\Teamleader\Invoices\CreditnoteLine;
+use OnlineSupporter\Teamleader\Subscriptions\Subscription;
+use OnlineSupporter\Teamleader\Subscriptions\SubscriptionLine;
 
 class TeamleaderTest extends \PHPUnit_Framework_TestCase
 {
@@ -94,7 +94,7 @@ class TeamleaderTest extends \PHPUnit_Framework_TestCase
     {
         $data = $this->teamleader->crmGetContacts();
         foreach ($data as $row) {
-            $this->assertInstanceOf('SumoCoders\Teamleader\Crm\Contact', $row);
+            $this->assertInstanceOf('OnlineSupporter\Teamleader\Crm\Contact', $row);
         }
     }
 
@@ -165,7 +165,7 @@ class TeamleaderTest extends \PHPUnit_Framework_TestCase
     {
         $data = $this->teamleader->crmGetCompanies();
         foreach ($data as $row) {
-            $this->assertInstanceOf('SumoCoders\Teamleader\Crm\Company', $row);
+            $this->assertInstanceOf('OnlineSupporter\Teamleader\Crm\Company', $row);
         }
     }
 
@@ -179,7 +179,7 @@ class TeamleaderTest extends \PHPUnit_Framework_TestCase
         $id = $this->teamleader->crmAddCompany($company);
 
         $response = $this->teamleader->crmGetCompany($id);
-        $this->assertInstanceOf('SumoCoders\Teamleader\Crm\Company', $response);
+        $this->assertInstanceOf('OnlineSupporter\Teamleader\Crm\Company', $response);
     }
 
     /**
@@ -192,7 +192,7 @@ class TeamleaderTest extends \PHPUnit_Framework_TestCase
         $id = $this->teamleader->crmAddCompany($company);
 
         $response = $this->teamleader->crmGetCompany($id);
-        $this->assertInstanceOf('SumoCoders\Teamleader\Crm\Company', $response);
+        $this->assertInstanceOf('OnlineSupporter\Teamleader\Crm\Company', $response);
     }
 
     /**
@@ -212,7 +212,7 @@ class TeamleaderTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($this->teamleader->crmUpdateCompany($company));
 
         $response = $this->teamleader->crmGetCompany($id);
-        $this->assertInstanceOf('SumoCoders\Teamleader\Crm\Company', $response);
+        $this->assertInstanceOf('OnlineSupporter\Teamleader\Crm\Company', $response);
         $this->assertEquals($street, $response->getStreet());
     }
 
@@ -241,8 +241,8 @@ class TeamleaderTest extends \PHPUnit_Framework_TestCase
 
         $customers = $this->teamleader->crmGetAllCustomers();
 
-        $this->assertInstanceOf('SumoCoders\Teamleader\Crm\Company', $customers['companies'][$companyId]);
-        $this->assertInstanceOf('SumoCoders\Teamleader\Crm\Contact', $customers['contacts'][$contactId]);
+        $this->assertInstanceOf('OnlineSupporter\Teamleader\Crm\Company', $customers['companies'][$companyId]);
+        $this->assertInstanceOf('OnlineSupporter\Teamleader\Crm\Contact', $customers['contacts'][$contactId]);
     }
 
     /**
@@ -328,7 +328,7 @@ class TeamleaderTest extends \PHPUnit_Framework_TestCase
 
         $response = $this->teamleader->invoicesGetInvoice($id);
 
-        $this->assertInstanceOf('SumoCoders\Teamleader\Invoices\Invoice', $response);
+        $this->assertInstanceOf('OnlineSupporter\Teamleader\Invoices\Invoice', $response);
     }
 
     /**
@@ -428,7 +428,7 @@ class TeamleaderTest extends \PHPUnit_Framework_TestCase
         $dateTo = strtotime(date('Y-m-d H:i:s') . " +1 day");
         $response = $this->teamleader->invoicesGetInvoices($dateFrom, $dateTo);
 
-        $this->assertInstanceOf('SumoCoders\Teamleader\Invoices\Invoice', $response[0]);
+        $this->assertInstanceOf('OnlineSupporter\Teamleader\Invoices\Invoice', $response[0]);
     }
 
     /**
@@ -515,7 +515,7 @@ class TeamleaderTest extends \PHPUnit_Framework_TestCase
 
         $response = $this->teamleader->invoicesGetCreditnote($id);
 
-        $this->assertInstanceOf('SumoCoders\Teamleader\Invoices\Creditnote', $response);
+        $this->assertInstanceOf('OnlineSupporter\Teamleader\Invoices\Creditnote', $response);
     }
 
     /**
@@ -562,7 +562,7 @@ class TeamleaderTest extends \PHPUnit_Framework_TestCase
         $dateTo = strtotime(date('Y-m-d H:i:s') . " +1 day");
         $response = $this->teamleader->invoicesGetCreditnotes($dateFrom, $dateTo);
 
-        $this->assertInstanceOf('SumoCoders\Teamleader\Invoices\Creditnote', $response[0]);
+        $this->assertInstanceOf('OnlineSupporter\Teamleader\Invoices\Creditnote', $response[0]);
     }
 
     /**

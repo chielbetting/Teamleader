@@ -1,10 +1,10 @@
 <?php
 
-namespace SumoCoders\Teamleader\Notes;
+namespace OnlineSupporter\Teamleader\Notes;
 
-use SumoCoders\Teamleader\Exception;
-use SumoCoders\Teamleader\Teamleader;
-use SumoCoders\Teamleader\Deals\Deal;
+use OnlineSupporter\Teamleader\Exception;
+use OnlineSupporter\Teamleader\Teamleader;
+use OnlineSupporter\Teamleader\Deals\Deal;
 
 class Note
 {

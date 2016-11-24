@@ -1,11 +1,11 @@
 <?php
 
-namespace SumoCoders\Teamleader\Products;
+namespace OnlineSupporter\Teamleader\Products;
 
-use SumoCoders\Teamleader\Exception;
-use SumoCoders\Teamleader\Teamleader;
-use SumoCoders\Teamleader\Crm\Contact;
-use SumoCoders\Teamleader\Crm\Company;
+use OnlineSupporter\Teamleader\Exception;
+use OnlineSupporter\Teamleader\Teamleader;
+use OnlineSupporter\Teamleader\Crm\Contact;
+use OnlineSupporter\Teamleader\Crm\Company;
 
 class Product
 {

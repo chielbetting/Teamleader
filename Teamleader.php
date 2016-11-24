@@ -1,17 +1,18 @@
 <?php
 
-namespace SumoCoders\Teamleader;
+namespace OnlineSupporter\Teamleader;
 
-use SumoCoders\Teamleader\Crm\Contact;
-use SumoCoders\Teamleader\Crm\Company;
-use SumoCoders\Teamleader\Invoices\Invoice;
-use SumoCoders\Teamleader\Invoices\Creditnote;
-use SumoCoders\Teamleader\Subscriptions\Subscription;
-use SumoCoders\Teamleader\Deals\Deal;
-use SumoCoders\Teamleader\Departments\Department;
-use SumoCoders\Teamleader\Users\User;
-use SumoCoders\Teamleader\Notes\Note;
-use SumoCoders\Teamleader\Products\Product;
+use OnlineSupporter\Teamleader\Crm\Contact;
+use OnlineSupporter\Teamleader\Crm\Company;
+use OnlineSupporter\Teamleader\Invoices\Invoice;
+use OnlineSupporter\Teamleader\Invoices\Creditnote;
+use OnlineSupporter\Teamleader\Subscriptions\Subscription;
+use OnlineSupporter\Teamleader\Deals\Deal;
+use OnlineSupporter\Teamleader\Departments\Department;
+use OnlineSupporter\Teamleader\Users\User;
+use OnlineSupporter\Teamleader\Notes\Note;
+use OnlineSupporter\Teamleader\Products\Product;
+use OnlineSupporter\Teamleader\Projects\Project;
 
 /**
  * Teamleader class
@@ -1232,5 +1233,52 @@ class Teamleader
         }
 
         return Product::initializeWithRawData($rawData);
+    }
+
+    /**
+     * Search for projects
+     *
+     * @param int $amount The amount of projects returned per
+     *                                   request (1-100)
+     * @param int         $page     The current page (first page is 0)
+     * @return array of Project
+     */
+    public function getProjects($amount = 100, $page = 0)
+    {
+        $fields = array();
+        $fields['amount'] = (int) $amount;
+        $fields['pageno'] = (int) $page;
+
+        $rawData = $this->doCall('getProjects.php', $fields);
+        $return = array();
+
+        if (!empty($rawData)) {
+            foreach ($rawData as $row) {
+                $return[] = Project::initializeWithRawData($row);
+            }
+        }
+
+        return $return;
+    }
+
+    /**
+     * Fetch information about a project
+     *
+     * @param  int     $id The ID of the project
+     * @return project
+     */
+    public function getProject($id)
+    {
+        $fields = array();
+        $fields['project_id'] = (int) $id;
+
+        $rawData = $this->doCall('getProject.php', $fields);
+
+        // validate response
+        if (!is_array($rawData)) {
+            throw new Exception($rawData);
+        }
+
+        return Project::initializeWithRawData($rawData);
     }
 }

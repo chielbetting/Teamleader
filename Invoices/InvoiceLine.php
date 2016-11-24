@@ -4,11 +4,11 @@
  * @todo Bookkeeping accounts
  */
 
-namespace SumoCoders\Teamleader\Invoices;
+namespace OnlineSupporter\Teamleader\Invoices;
 
-use SumoCoders\Teamleader\Exception;
-use SumoCoders\Teamleader\Teamleader;
-use SumoCoders\Products\Product;
+use OnlineSupporter\Teamleader\Exception;
+use OnlineSupporter\Teamleader\Teamleader;
+use OnlineSupporter\Products\Product;
 
 class InvoiceLine
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace SumoCoders\Teamleader\Subscriptions;
+namespace OnlineSupporter\Teamleader\Subscriptions;
 
-use SumoCoders\Teamleader\Exception;
-use SumoCoders\Teamleader\Teamleader;
-use SumoCoders\Teamleader\Crm\Contact;
-use SumoCoders\Teamleader\Crm\Company;
+use OnlineSupporter\Teamleader\Exception;
+use OnlineSupporter\Teamleader\Teamleader;
+use OnlineSupporter\Teamleader\Crm\Contact;
+use OnlineSupporter\Teamleader\Crm\Company;
 
 /**
  * Subscription class
@@ -197,7 +197,7 @@ class Subscription
      *
      * @return self
      *
-     * @throws \SumoCoders\Teamleader\Exception
+     * @throws \OnlineSupporter\Teamleader\Exception
      */
     public function setRepeatAfter($repeatAfter)
     {
@@ -234,7 +234,7 @@ class Subscription
      * Is this subscription linked to a contact or a company
      *
      * @return string
-     * @throws \SumoCoders\Teamleader\Exception
+     * @throws \OnlineSupporter\Teamleader\Exception
      */
     public function isContactOrCompany()
     {

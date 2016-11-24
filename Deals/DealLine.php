@@ -1,6 +1,6 @@
 <?php
 
-namespace SumoCoders\Teamleader\Deals;
+namespace OnlineSupporter\Teamleader\Deals;
 
 class DealLine
 {
