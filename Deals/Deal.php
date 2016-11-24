@@ -1,11 +1,11 @@
 <?php
 
-namespace OnlineSupporter\Teamleader\Deals;
+namespace SumoCoders\Teamleader\Deals;
 
-use OnlineSupporter\Teamleader\Exception;
-use OnlineSupporter\Teamleader\Teamleader;
-use OnlineSupporter\Teamleader\Crm\Contact;
-use OnlineSupporter\Teamleader\Crm\Company;
+use SumoCoders\Teamleader\Exception;
+use SumoCoders\Teamleader\Teamleader;
+use SumoCoders\Teamleader\Crm\Contact;
+use SumoCoders\Teamleader\Crm\Company;
 
 class Deal
 {
@@ -352,7 +352,7 @@ class Deal
      * Is this deal linked to a contact or a company
      *
      * @return string
-     * @throws \OnlineSupporter\Teamleader\Exception
+     * @throws \SumoCoders\Teamleader\Exception
      */
     public function isContactOrCompany()
     {

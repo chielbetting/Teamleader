@@ -4,7 +4,7 @@
  * @todo Bookkeeping accounts
  */
 
-namespace OnlineSupporter\Teamleader\Subscriptions;
+namespace SumoCoders\Teamleader\Subscriptions;
 
 class SubscriptionLine
 {

@@ -6,12 +6,12 @@
  * @todo Discount info
  */
 
-namespace OnlineSupporter\Teamleader\Invoices;
+namespace SumoCoders\Teamleader\Invoices;
 
-use OnlineSupporter\Teamleader\Exception;
-use OnlineSupporter\Teamleader\Teamleader;
-use OnlineSupporter\Teamleader\Crm\Contact;
-use OnlineSupporter\Teamleader\Crm\Company;
+use SumoCoders\Teamleader\Exception;
+use SumoCoders\Teamleader\Teamleader;
+use SumoCoders\Teamleader\Crm\Contact;
+use SumoCoders\Teamleader\Crm\Company;
 
 class Invoice
 {
@@ -156,7 +156,7 @@ class Invoice
     }
 
     /**
-     * @param \OnlineSupporter\Teamleader\Crm\Company $company
+     * @param \SumoCoders\Teamleader\Crm\Company $company
      */
     public function setCompany(Company $company)
     {
@@ -164,7 +164,7 @@ class Invoice
     }
 
     /**
-     * @return \OnlineSupporter\Teamleader\Crm\Company
+     * @return \SumoCoders\Teamleader\Crm\Company
      */
     public function getCompany()
     {
@@ -172,7 +172,7 @@ class Invoice
     }
 
     /**
-     * @param \OnlineSupporter\Teamleader\Crm\Contact $contact
+     * @param \SumoCoders\Teamleader\Crm\Contact $contact
      */
     public function setContact(Contact $contact)
     {
@@ -180,7 +180,7 @@ class Invoice
     }
 
     /**
-     * @return \OnlineSupporter\Teamleader\Crm\Contact
+     * @return \SumoCoders\Teamleader\Crm\Contact
      */
     public function getContact()
     {
@@ -447,7 +447,7 @@ class Invoice
      * Is this invoice linked to a contact or a company
      *
      * @return string
-     * @throws \OnlineSupporter\Teamleader\Exception
+     * @throws \SumoCoders\Teamleader\Exception
      */
     public function isContactOrCompany()
     {

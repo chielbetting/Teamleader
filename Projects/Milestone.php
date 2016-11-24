@@ -1,9 +1,9 @@
 <?php
 
-namespace OnlineSupporter\Teamleader\Projects;
+namespace SumoCoders\Teamleader\Projects;
 
-use OnlineSupporter\Teamleader\Exception;
-use OnlineSupporter\Teamleader\Teamleader;
+use SumoCoders\Teamleader\Exception;
+use SumoCoders\Teamleader\Teamleader;
 
 class Milestone
 {

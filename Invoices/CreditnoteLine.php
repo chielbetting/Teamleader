@@ -4,10 +4,10 @@
  * @todo Bookkeeping accounts
  */
 
-namespace OnlineSupporter\Teamleader\Invoices;
+namespace SumoCoders\Teamleader\Invoices;
 
-use OnlineSupporter\Teamleader\Exception;
-use OnlineSupporter\Teamleader\Teamleader;
+use SumoCoders\Teamleader\Exception;
+use SumoCoders\Teamleader\Teamleader;
 
 class CreditnoteLine
 {

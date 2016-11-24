@@ -1,6 +1,6 @@
 <?php
 
-namespace OnlineSupporter\Teamleader\Users;
+namespace SumoCoders\Teamleader\Users;
 
 class User
 {

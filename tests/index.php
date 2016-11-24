@@ -16,11 +16,11 @@ spl_autoload_register(function ($class) {
 
 require_once 'config.php';
 
-use \OnlineSupporter\Teamleader\Teamleader;
-use \OnlineSupporter\Teamleader\Crm\Contact;
-use \OnlineSupporter\Teamleader\Crm\Company;
-use \OnlineSupporter\Teamleader\Invoices\Invoice;
-use \OnlineSupporter\Teamleader\Invoices\InvoiceLine;
+use \SumoCoders\Teamleader\Teamleader;
+use \SumoCoders\Teamleader\Crm\Contact;
+use \SumoCoders\Teamleader\Crm\Company;
+use \SumoCoders\Teamleader\Invoices\Invoice;
+use \SumoCoders\Teamleader\Invoices\InvoiceLine;
 
 // create instance
 $teamleader = new Teamleader(API_GROUP, API_KEY);

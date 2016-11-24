@@ -1,19 +1,19 @@
 <?php
 
-namespace OnlineSupporter\Teamleader;
+namespace SumoCoders\Teamleader;
 
-use OnlineSupporter\Teamleader\Crm\Contact;
-use OnlineSupporter\Teamleader\Crm\Company;
-use OnlineSupporter\Teamleader\Invoices\Invoice;
-use OnlineSupporter\Teamleader\Invoices\Creditnote;
-use OnlineSupporter\Teamleader\Subscriptions\Subscription;
-use OnlineSupporter\Teamleader\Deals\Deal;
-use OnlineSupporter\Teamleader\Departments\Department;
-use OnlineSupporter\Teamleader\Users\User;
-use OnlineSupporter\Teamleader\Notes\Note;
-use OnlineSupporter\Teamleader\Products\Product;
-use OnlineSupporter\Teamleader\Projects\Project;
-use OnlineSupporter\Teamleader\Projects\Milestone;
+use SumoCoders\Teamleader\Crm\Contact;
+use SumoCoders\Teamleader\Crm\Company;
+use SumoCoders\Teamleader\Invoices\Invoice;
+use SumoCoders\Teamleader\Invoices\Creditnote;
+use SumoCoders\Teamleader\Subscriptions\Subscription;
+use SumoCoders\Teamleader\Deals\Deal;
+use SumoCoders\Teamleader\Departments\Department;
+use SumoCoders\Teamleader\Users\User;
+use SumoCoders\Teamleader\Notes\Note;
+use SumoCoders\Teamleader\Products\Product;
+use SumoCoders\Teamleader\Projects\Project;
+use SumoCoders\Teamleader\Projects\Milestone;
 
 /**
  * Teamleader class

@@ -1,5 +1,5 @@
 <?php
-namespace OnlineSupporter\Teamleader;
+namespace SumoCoders\Teamleader;
 
 /**
  * Teamleader Exception class

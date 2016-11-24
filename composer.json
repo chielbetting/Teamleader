@@ -1,25 +1,22 @@
 {
-	"name": "onlinesupporter/teamleader",
+	"name": "sumocoders/teamleader",
 	"type": "library",
 	"description": "PHP Teamleader is a (wrapper)class to communicate with Teamleader (http://www.teamleader.be).",
-	"homepage": "https://github.com/chielbetting/Teamleader",
+	"homepage": "https://github.com/sumocoders/Teamleader",
 	"license": "BSD",
 	"authors": [
 		{
 			"name": "Tijs Verkoyen",
 			"email": "php-teamleader@verkoyen.eu",
 			"role": "Developer"
-		},
-		{
-			"name": "Chiel Betting"
 		}
 	],
 	"require": {
 		"php": ">=5.3.0",
 		"ext-curl": "*"
 	},
-	"target-dir": "OnlineSupporter/Teamleader",
+	"target-dir": "SumoCoders/Teamleader",
 	"autoload": {
-		"psr-0": {"OnlineSupporter\\Teamleader": ""}
+		"psr-0": {"SumoCoders\\Teamleader": ""}
 	}
 }
