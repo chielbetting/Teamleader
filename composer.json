@@ -1,5 +1,6 @@
 {
 	"name": "onlinesupporter/teamleader",
+	"version": "1.0",
 	"type": "library",
 	"description": "PHP Teamleader is a (wrapper)class to communicate with Teamleader (http://www.teamleader.be).",
 	"homepage": "https://github.com/chielbetting/Teamleader",
