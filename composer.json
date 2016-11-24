@@ -1,6 +1,6 @@
 {
 	"name": "onlinesupporter/teamleader",
-	"version": "1.0",
+	"version": "1.1",
 	"type": "library",
 	"description": "PHP Teamleader is a (wrapper)class to communicate with Teamleader (http://www.teamleader.be).",
 	"homepage": "https://github.com/chielbetting/Teamleader",
@@ -12,9 +12,7 @@
 			"role": "Developer"
 		},
 		{
-			"name": "Chiel Betting",
-			"email": "chiel@mijnos.nl",
-			"role": "Developer"
+			"name": "Chiel Betting"
 		}
 	],
 	"require": {

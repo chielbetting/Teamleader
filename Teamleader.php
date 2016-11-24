@@ -1237,6 +1237,19 @@ class Teamleader
     }
 
     /**
+     * Add a project
+     *
+     * @param array $fields
+     * @return int
+     */
+    public function addProject($fields = array())
+    {
+        $id = $this->doCall('addProject.php', $fields);
+
+        return $id;
+    }
+
+    /**
      * Search for projects
      *
      * @param int $amount The amount of projects returned per
