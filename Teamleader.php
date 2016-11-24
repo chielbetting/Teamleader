@@ -13,6 +13,7 @@ use OnlineSupporter\Teamleader\Users\User;
 use OnlineSupporter\Teamleader\Notes\Note;
 use OnlineSupporter\Teamleader\Products\Product;
 use OnlineSupporter\Teamleader\Projects\Project;
+use OnlineSupporter\Teamleader\Projects\Milestone;
 
 /**
  * Teamleader class
@@ -1218,7 +1219,7 @@ class Teamleader
      * Fetch information about a product
      *
      * @param  int     $id The ID of the product
-     * @return product
+     * @return Product
      */
     public function getProduct($id)
     {
@@ -1265,7 +1266,7 @@ class Teamleader
      * Fetch information about a project
      *
      * @param  int     $id The ID of the project
-     * @return project
+     * @return Project
      */
     public function getProject($id)
     {
@@ -1280,5 +1281,50 @@ class Teamleader
         }
 
         return Project::initializeWithRawData($rawData);
+    }
+
+    /**
+     * Fetch information about project milestones
+     *
+     * @param  int     $id The ID of the project
+     * @return array of Milestone
+     */
+    public function getMilestonesByProject($id)
+    {
+        $fields = array();
+        $fields['project_id'] = (int) $id;
+
+        $rawData = $this->doCall('getMilestonesByProject.php', $fields);
+
+        $return = array();
+
+        if (!empty($rawData)) {
+            foreach ($rawData as $row) {
+                $return[] = Milestone::initializeWithRawData($row);
+            }
+        }
+
+        return $return;
+    }
+
+    /**
+     * Fetch information about a milestone
+     *
+     * @param  int     $id The ID of the milestone
+     * @return Milestone
+     */
+    public function getMilestone($id)
+    {
+        $fields = array();
+        $fields['milestone_id'] = (int) $id;
+
+        $rawData = $this->doCall('getMilestone.php', $fields);
+
+        // validate response
+        if (!is_array($rawData)) {
+            throw new Exception($rawData);
+        }
+
+        return Milestone::initializeWithRawData($rawData);
     }
 }

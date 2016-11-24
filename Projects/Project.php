@@ -18,14 +18,19 @@ class Project
     private $title;
 
     /**
-     * @var integer
+     * @var string
      */
     private $phase;
 
     /**
-     * @var string
+     * @var integer
      */
     private $start_date;
+
+    /**
+     * @var string
+     */
+    private $start_date_formatted;
 
     /**
      * @return int
@@ -76,7 +81,7 @@ class Project
     }
 
     /**
-     * @return string
+     * @return integer
      */
     public function getStartDate()
     {
@@ -84,11 +89,27 @@ class Project
     }
 
     /**
-     * @param string $externalId
+     * @param integer $start_date
      */
     public function setStartDate($start_date)
     {
         $this->start_date = $start_date;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStartDateFormatted()
+    {
+        return $this->start_date_formatted;
+    }
+
+    /**
+     * @param integer $start_date
+     */
+    public function setStartDateFormatted($start_date_formatted)
+    {
+        $this->start_date_formatted = $start_date_formatted;
     }
 
     /**
@@ -138,8 +159,11 @@ class Project
         if ($this->getPhase()) {
             $return['phase'] = $this->getPhase();
         }
-        if ($this->getStartDate() !== 0) {
+        if ($this->getStartDate()) {
             $return['start_date'] = $this->getStartDate();
+        }
+        if ($this->getStartDateFormatted()) {
+            $return['start_date_formatted'] = $this->getStartDateFormatted();
         }
 
         return $return;
