@@ -1250,6 +1250,19 @@ class Teamleader
     }
 
     /**
+     * Add a milestone
+     *
+     * @param array $fields
+     * @return int
+     */
+    public function addMilestone($fields = array())
+    {
+        $id = $this->doCall('addMilestone.php', $fields);
+
+        return $id;
+    }
+
+    /**
      * Search for projects
      *
      * @param int $amount The amount of projects returned per
