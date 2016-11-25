@@ -13,14 +13,49 @@ class Project
     private $id;
 
     /**
+     * @var  int
+     */
+    private $project_nr;
+
+    /**
      * @var  string
      */
     private $title;
 
     /**
+     * @var  string
+     */
+    private $contact_or_company;
+
+    /**
+     * @var  integer
+     */
+    private $contact_or_company_id;
+
+    /**
+     * @var float
+     */
+    private $budget_indication;
+
+    /**
      * @var string
      */
     private $phase;
+
+    /**
+     * @var float
+     */
+    private $budget_spent_internal;
+
+    /**
+     * @var float
+     */
+    private $budget_spent_external;
+
+    /**
+     * @var string
+     */
+    private $description_html;
 
     /**
      * @var integer
@@ -31,6 +66,11 @@ class Project
      * @var string
      */
     private $start_date_formatted;
+
+    /**
+     * @var array
+     */
+    private $custom_fields = array();
 
     /**
      * @return int
@@ -49,7 +89,23 @@ class Project
     }
 
     /**
-     * @return string
+     * @return int
+     */
+    public function getProjectNr()
+    {
+        return $this->project_nr;
+    }
+
+    /**
+     * @param int $project_nr
+     */
+    public function setProjectNr($project_nr)
+    {
+        $this->project_nr = $project_nr;
+    }
+
+    /**
+     * @return int
      */
     public function getTitle()
     {
@@ -62,6 +118,54 @@ class Project
     public function setTitle($title)
     {
         $this->title = $title;
+    }
+
+    /**
+     * @return string
+     */
+    public function getContactOrCompany()
+    {
+        return $this->contact_or_company;
+    }
+
+    /**
+     * @param string $contact_or_company
+     */
+    public function setContactOrCompany($contact_or_company)
+    {
+        $this->contact_or_company = $contact_or_company;
+    }
+
+    /**
+     * @return int
+     */
+    public function getContactOrCompanyId()
+    {
+        return $this->contact_or_company_id;
+    }
+
+    /**
+     * @param int $contact_or_company
+     */
+    public function setContactOrCompanyId($contact_or_company_id)
+    {
+        $this->contact_or_company_id = $contact_or_company_id;
+    }
+
+    /**
+     * @return float
+     */
+    public function getBudgetIndication()
+    {
+        return $this->budget_indication;
+    }
+
+    /**
+     * @param float $budget_indication
+     */
+    public function setBudgetIndication($budget_indication)
+    {
+        $this->budget_indication = $budget_indication;
     }
 
     /**
@@ -78,6 +182,54 @@ class Project
     public function setPhase($phase)
     {
         $this->phase = $phase;
+    }
+
+    /**
+     * @return float
+     */
+    public function getBudgetSpentInternal()
+    {
+        return $this->budget_spent_internal;
+    }
+
+    /**
+     * @param float $budget_spent_internal
+     */
+    public function setBudgetSpentInternal($budget_spent_internal)
+    {
+        $this->budget_spent_internal = $budget_spent_internal;
+    }
+
+    /**
+     * @return float
+     */
+    public function getBudgetSpentExternal()
+    {
+        return $this->budget_spent_external;
+    }
+
+    /**
+     * @param float $budget_spent_external
+     */
+    public function setBudgetSpentExternal($budget_spent_external)
+    {
+        $this->budget_spent_external = $budget_spent_external;
+    }
+
+    /**
+     * @return string
+     */
+    public function getDescriptionHtml()
+    {
+        return $this->description_html;
+    }
+
+    /**
+     * @param string $description_html
+     */
+    public function setDescriptionHtml($description_html)
+    {
+        $this->description_html = $description_html;
     }
 
     /**
@@ -110,6 +262,22 @@ class Project
     public function setStartDateFormatted($start_date_formatted)
     {
         $this->start_date_formatted = $start_date_formatted;
+    }
+
+    /**
+     * @return array
+     */
+    public function getCustomFields()
+    {
+        return $this->custom_fields;
+    }
+
+    /**
+     * @param integer $start_date
+     */
+    public function setCustomFields($custom_fields)
+    {
+        $this->custom_fields = $custom_fields;
     }
 
     /**
