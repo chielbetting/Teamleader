@@ -14,6 +14,7 @@ use SumoCoders\Teamleader\Notes\Note;
 use SumoCoders\Teamleader\Products\Product;
 use SumoCoders\Teamleader\Projects\Project;
 use SumoCoders\Teamleader\Projects\Milestone;
+use SumoCoders\Teamleader\Files\File;
 
 /**
  * Teamleader class
@@ -1352,5 +1353,38 @@ class Teamleader
         }
 
         return Milestone::initializeWithRawData($rawData);
+    }
+
+    public function getFiles($amount = 0, $pageno = 0, $object_type = '', $object_id = 0, $folder_name = null)
+    {
+        $fields = array();
+        $fields['amount'] = (int) $amount;
+        $fields['pageno'] = (int) $pageno;
+        $fields['object_type'] = (string) $object_type;
+        $fields['object_id'] = (int) $object_id;
+
+        if( ! is_null($folder_name)) {
+            $fields['object_id'] = (int) $object_id;
+        }
+
+        $rawData = $this->doCall('getFiles.php', $fields);
+        $return = array();
+
+        if (!empty($rawData)) {
+            if($rawData['status'] == 'success') {
+                foreach($rawData['data'] as $row) {
+                    $return[] = File::initializeWithRawData($row);
+                }
+            }
+        }
+
+        return $return;
+    }
+
+    public function uploadFile($fields = array())
+    {
+        $id = $this->doCall('uploadFile.php', $fields);
+
+        return $id;
     }
 }
